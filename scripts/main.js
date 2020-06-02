@@ -69,6 +69,7 @@ function selectedItems(){
 	
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
+	var priceProducts = [];
 	
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
@@ -82,11 +83,14 @@ function selectedItems(){
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
+			var price = parseFloat(ele[i].value.substr(ele[i].value.length - 4));
+			priceProducts.push(price); 
+			console.log(price); 
 		}
 	}
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(priceProducts)));
 		
 }
