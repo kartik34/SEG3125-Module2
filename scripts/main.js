@@ -85,7 +85,6 @@ function selectedItems(){
 			chosenProducts.push(ele[i].value);
 			var price = parseFloat(ele[i].value.substr(ele[i].value.length - 4));
 			priceProducts.push(price); 
-			console.log(price); 
 		}
 	}
 		
