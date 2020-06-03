@@ -63,7 +63,7 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
-		price: 9.00
+		price: 9.99
 	},
 	{
 		name: "cereal",
